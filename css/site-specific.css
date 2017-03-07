@@ -19,7 +19,6 @@ a:hover {
   border: 1px solid #fff;
 }
 
-
 /*
  * Base structure
  */
@@ -30,7 +29,8 @@ body {
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
+  font-family: 'Reenie Beanie', cursive;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -60,6 +60,7 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 .masthead-nav > li {
@@ -71,7 +72,7 @@ body {
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
-  font-size: 16px;
+  font-size: 1.5em;
   font-weight: bold;
   color: #000000; /* IE8 proofing */
   color: rgba(0,0,0,.75);
@@ -127,32 +128,37 @@ body {
  * Affix and center
  */
 
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+h1.cover-heading {
+  margin-bottom: 20px;
+  font-size: 4em;
 }
 
-@media (min-width: 992px) {
+.col-md-4 {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 20px;
+}
+p {
+  font-size: 2em;
+}
+@media (min-width: 500px) {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    max-width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 990px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    max-width: 900px;
   }
 }
