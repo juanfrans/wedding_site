@@ -19,7 +19,12 @@
   <link rel="stylesheet" href="../css/site-specific.css">
 
   <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Reenie+Beanie|Cabin+Sketch:400,700|Lato:300,400,700|Raleway:100,300,400,600" rel="stylesheet">
+
+  <!-- Leaflet script -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <script src="https://mapzen.com/tangram/tangram.min.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,11 +51,16 @@
         </div>
 
         <div class="inner cover">
-          <h1 class="cover-heading">We are getting married!</h1>
-          <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-default">Learn more</a>
-          </p>
+          <h1 class="cover-heading">Main Event</h1>
+          <p class="lead">September 2, 2017 • Parga, Greece</p>
+          <p class="lead">Location: Cape North West, Valtos Beach (Παραλία Βάλτος)</p>
+          <p class="lead">Ceremony at 6pm (in the little chapel next to the venue)</p>
+          <p class="lead">Cocktails and sunset by the beach at 7pm</p>
+          <p class="lead">Delicious dinner at 8pm</p>
+          <p class="lead">Party all night!</p>
+          <div id="map"></div>
+          <h1 class="cover-heading">Day Before</h1>
+          <p class="lead">A very informal beach party at Alonaki Fnariou (Αλονάκι Φαναριού)</p>
         </div>
 
         <!-- <div class="mastfoot">
@@ -66,5 +76,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    var map = L.map('map');
+    var layer = Tangram.leafletLayer({
+        scene: 'scene.yaml',
+        attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
+    });
+    layer.addTo(map);
+    map.setView([39.283,20.391], 15);
+  </script>
 </body>
 </html>
