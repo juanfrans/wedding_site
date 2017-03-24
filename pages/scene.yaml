@@ -1,56 +1,88 @@
+cameras:
+    camera1:
+        type: perspective
+
+lights:
+    light1:
+        type: directional
+        direction: [0, 1, -.5]
+        diffuse: .3
+        ambient: 1
+
 sources:
     mapzen:
         type: TopoJSON
-        url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson?api_key=matrix-BCMJnkr
+        url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson
+        url_params:
+            api_key: matrix-BCMJnkr
+        max_zoom: 16
+
 layers:
-    water:
-        data: { source: mapzen }
-        draw:
-            polygons:
-                order: 2
-                color: '#353535'
     earth:
         data: { source: mapzen }
         draw:
             polygons:
-                order: 1
-                color: '#555555'
+                order: function() { return feature.sort_rank; }
+                color: '#ddeeee'
+
     landuse:
         data: { source: mapzen }
         draw:
             polygons:
-                order: 3
-                color: '#666666'
+                order: function() { return feature.sort_rank; }
+                color: '#aaffaa'
+
+    water:
+        data: { source: mapzen }
+        draw:
+            polygons:
+                order: function() { return feature.sort_rank; }
+                color: '#88bbee'
+
     roads:
-        data: { source: mapzen}
-        filter: { not: { kind: [rail, ferry] } }
+        data: { source: mapzen }
+        filter:
+            not: { kind: [path, rail, ferry] }
         draw:
             lines:
-                order: 4
-                color: '#ffffff'
-                width: [[7,0.0px], [10, .5px], [15, .75px], [17, 5m]]
+                order: function() { return feature.sort_rank; }
+                color: gray
+                width: 8
+                cap: round
         highway:
-            filter: { kind: highway }
+            filter:
+                kind: highway
             draw:
                 lines:
-                    order: 5
-                    width: [[8,0px], [8,.25px], [11, 1.5px], [14, 2px], [16, 4px], [17, 10m]]
-            link:
-                filter: { is_link: true } # on- and off-ramps, etc
-                draw:
-                    lines:
-                        width: [[8,0px], [14, 3px], [16, 5px], [18, 10m]]
-                tunnel-link:
-                    filter: {is_tunnel: true, $zoom: {min: 13} }
-        tunnel:
-            filter: {is_tunnel: true }
+                    order: function() { return feature.sort_rank; }
+                    color: '#cc6666'
+                    width: 12
+                    outline:
+                        color: grey
+                        width: 1.5
+        minor_road:
+            filter:
+                kind: minor_road
             draw:
-                roads:
-                    order: 6
+                lines:
+                    order: function() { return feature.sort_rank; }
+                    color: lightgrey
+                    width: 5
+
     buildings:
         data: { source: mapzen }
         draw:
             polygons:
-                order: 7
-                color: '#999999'
-                extrude: true
+                order: function() { return feature.sort_rank; }
+                color: |
+                    function () {
+                        var h = feature.height || 20;
+                        h = Math.min((h + 50)/ 255, .8); // max brightness: .8
+                        h = Math.max(h, .4); // min brightness: .4
+                        return [h, h, h];
+                    }
+        3d-buildings:
+            filter: { $zoom: { min: 15 } }
+            draw:
+                polygons:
+                    extrude: function () { return feature.height > 20 || $zoom >= 16; }

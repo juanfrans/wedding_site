@@ -13,7 +13,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="../css/site-specific.css">
@@ -23,8 +23,6 @@
 
   <!-- Leaflet script -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-  <script src="https://mapzen.com/tangram/tangram.min.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,56 +32,61 @@
   <![endif]-->
 </head>
 <body>
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand"><a href="../index.html">Natasa & Juan</a></h3>
-            <nav>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="details.html">Details</a></li>
-                <li><a href="registry.html">Registry</a></li>
-                <li><a href="rsvp.html">RSVP</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div class="inner cover">
-          <h1 class="cover-heading">Main Event</h1>
-          <p class="lead">September 2, 2017 • Parga, Greece</p>
-          <p class="lead">Location: Cape North West, Valtos Beach (Παραλία Βάλτος)</p>
-          <p class="lead">Ceremony at 6pm (in the little chapel next to the venue)</p>
-          <p class="lead">Cocktails and sunset by the beach at 7pm</p>
-          <p class="lead">Delicious dinner at 8pm</p>
-          <p class="lead">Party all night!</p>
-          <div id="map"></div>
-          <h1 class="cover-heading">Day Before</h1>
-          <p class="lead">A very informal beach party at Alonaki Fnariou (Αλονάκι Φαναριού)</p>
-        </div>
-
-        <!-- <div class="mastfoot">
-          <div class="inner">
-            <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          </div>
-        </div> -->
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Natasa & Juan</a>
       </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="details.html">Details</a></li>
+          <li><a href="registry.html">Registry</a></li>
+          <li><a href="rsvp.html">RSVP</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
+  </nav>
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Main Event</h2>
+    </div>
+    <div class="details-content">
+      <p class="details">September 2, 2017 • Parga, Greece</p>
+      <p class="details">Cape North West, Valtos Beach</p>
+      <div id="map"></div>
+      <p class="details">Ceremony at 6pm (in the little chapel next to the venue)</p>
+      <p class="details">Cocktails and sunset by the beach at 7pm</p>
+      <p class="details">Delicious dinner at 8pm</p>
+      <p class="details">Party all night!</p>
+    </div>
+    <div class="section-title">
+      <h2>Day Before</h2>
+    </div>
+    <p class="details">A very informal beach party at Alonaki Fnariou (Αλονάκι Φαναριού)</p>
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <script src="https://mapzen.com/tangram/tangram.min.js"></script>
   <script>
-    var map = L.map('map');
-    var layer = Tangram.leafletLayer({
-        scene: 'scene.yaml',
-        attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
-    });
-    layer.addTo(map);
-    map.setView([39.283,20.391], 15);
+      var map = L.map('map');
+      var layer = Tangram.leafletLayer({
+          scene: 'scene.yaml',
+          attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
+      });
+      layer.addTo(map);
+      map.setView([39.28, 20.39], 15);
   </script>
 </body>
 </html>

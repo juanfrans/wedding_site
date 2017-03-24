@@ -2,14 +2,12 @@
 body {
   font-family: 'Reenie Beanie', cursive;
 }
-
 /* Customize container */
 @media (min-width: 768px) {
   .container {
     max-width: 1024px;
   }
 }
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the bottom border on the jumbotron for visual effect */
@@ -18,7 +16,7 @@ body {
   }
 }
 
-/* Navbar stuff */
+/********* Navbar stuff *********/
 .navbar-static-top {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -46,8 +44,17 @@ body {
 .navbar-nav > li > a:hover {
   text-decoration: underline;
 }
+.navbar-default .navbar-nav > .active > a {
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
 
-/* Jumbotron stuff */
+/********* Jumbotron stuff *********/
 .jumbotron h1 {
   text-align: center;
 }
@@ -57,8 +64,28 @@ body {
   background-color: #ffffff;
 }
 
+/********* Content stuff **********/
+.section-title h2{
+  text-align: center;
+  font-size: 4em;
+}
 .col-md-4 {
   padding-left: 3px;
   padding-right: 3px;
   padding-bottom: 6px;
+}
+.details-content {
+  margin-bottom: 40px;
+}
+p.details {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/********* Map styling ***********/
+#map {
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
