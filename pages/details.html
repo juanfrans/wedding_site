@@ -14,16 +14,14 @@
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+  <!-- Leaflet script -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="../css/site-specific.css">
 
   <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Reenie+Beanie|Cabin+Sketch:400,700|Lato:300,400,700|Raleway:100,300,400,600" rel="stylesheet">
-
-  <!-- Leaflet script -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Josefin+Sans:100,300,400|Reenie+Beanie|Roboto+Condensed:400,700&amp;subset=greek,greek-ext" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -59,18 +57,75 @@
       <h2>Main Event</h2>
     </div>
     <div class="details-content">
-      <p class="details">September 2, 2017 • Parga, Greece</p>
-      <p class="details">Cape North West, Valtos Beach</p>
-      <div id="map"></div>
-      <p class="details">Ceremony at 6pm (in the little chapel next to the venue)</p>
-      <p class="details">Cocktails and sunset by the beach at 7pm</p>
-      <p class="details">Delicious dinner at 8pm</p>
-      <p class="details">Party all night!</p>
+      <p class="details">September 2, 2017 • Parga, Greece<br>
+        Venue: Cape North West, Valtos Beach<br>
+        Ceremony at 6PM • At the little chapel next to the venue<br>
+      Cocktails and sunset by the beach • Delicious dinner at 8PM<br>
+      Party the rest of the night!</p>
+      <p class="details">---</p>
     </div>
+    <!-- <div class="section-title">
+      <h2>The Day Before</h2>
+    </div>
+    <div class="details-content">
+      <p class="details">A very informal beach party at Alonaki Fanariou</p>
+      <img src="../img/other/alonaki_02.png" class="img-responsive" alt="Responsive image">
+      <p class="details">---</p>
+    </div> -->
     <div class="section-title">
-      <h2>Day Before</h2>
+      <h2>How to Get Here?</h2>
     </div>
-    <p class="details">A very informal beach party at Alonaki Fnariou (Αλονάκι Φαναριού)</p>
+    <div class="details-content">
+      <p class="details">You can fly to Athens and spend a couple of
+        days there visiting the sites. See the Acropolis, the Acropolis Museum
+      and walk around all the beautiful neighborhoods.</p>
+      <img src="../img/other/Acropolis.jpg" class="img-responsive details-image" alt="Responsive image">
+      <p class="details">Then, you can either fly or drive. If you prefer to fly,
+        we suggest you take a plane to Ioannina and then drive from there to Parga.
+        Alternatively, you could also fly to Preveza and drive from there.<br><br>If you'd rather
+        drive all the way, you can rent a car in Athens and go by road to Parga. It takes
+        5 to 6 hours but it's a pretty awesome drive and you can stop in many places along the way.<br><br>
+      Here's a map with the possible routes and the wedding location:</p>
+      <div id="map"></div>
+      <p class="details">---</p>
+    </div>
+
+    <div class="section-title">
+      <h2>Where to Stay?</h2>
+    </div>
+    <div class="details-content">
+      <p class="details">First, fly to Athens and spend a couple of
+      days there visiting all the sites.</p>
+      <p class="details">---</p>
+    </div>
+
+    <div class="section-title">
+      <h2>Places to Visit Around Parga</h2>
+    </div>
+    <div class="details-content">
+      <p class="details">First, fly to Athens and spend a couple of
+      days there visiting all the sites.</p>
+      <p class="details">---</p>
+    </div>
+
+    <div class="section-title">
+      <h2>Contacts</h2>
+    </div>
+    <div class="details-content">
+      <p class="details">First, fly to Athens and spend a couple of
+      days there visiting all the sites.</p>
+      <p class="details">---</p>
+    </div>
+
+    <div class="section-title">
+      <h2>Attire</h2>
+    </div>
+    <div class="details-content">
+      <p class="details">First, fly to Athens and spend a couple of
+      days there visiting all the sites.</p>
+      <p class="details">---</p>
+    </div>
+
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -86,7 +141,7 @@
           attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
       });
       layer.addTo(map);
-      map.setView([39.28, 20.39], 15);
+      map.setView([38.85, 21.9], 8);
   </script>
 </body>
 </html>
