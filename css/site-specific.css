@@ -84,17 +84,29 @@
   margin-bottom: 40px;
 }
 p.details {
-  font-size: 2em;
+  font-size: 1.25em;
   font-weight: 100;
   text-align: center;
   margin-bottom: 0px;
   /*font-family: 'Roboto Condensed', sans-serif;*/
-  font-family: 'Reenie Beanie', cursive;
+  /*font-family: 'Reenie Beanie', cursive;*/
+  font-family: 'Roboto Mono', monospace;
   /*font-family: 'Josefin Sans', sans-serif;*/
 }
 img.details-image{
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.routesList {
+  /*font-family: 'Reenie Beanie', cursive;*/
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.15em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+.routesList li {
+  margin-bottom: 30px;
 }
 
 /********* Map styling ***********/

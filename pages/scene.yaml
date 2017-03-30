@@ -811,7 +811,18 @@ sources:
         url_params:
             api_key: global.sdk_mapzen_api_key
         max_zoom: 15
-
+    mapPaths:
+        type: GeoJSON
+        url: mapPaths.geojson
+    testPath:
+        type: GeoJSON
+        url: testLine.geojson
+    testPath2:
+        type: GeoJSON
+        url: testLine2.geojson
+    overlandRoute:
+        type: GeoJSON
+        url: overlandRoute.geojson
 #    # Only enable this for local debug, should not be enabled for prod (app inserts these at runtime)
 #    # These are all in San Francisco, California
 #    #
@@ -1106,6 +1117,34 @@ styles:
         blend_order: 0
 
 layers:
+    _mapPaths:
+      data: {source: mapPaths}
+      draw:
+        dashed:
+          color: '#FF8127'
+          width: 3px
+          order: 500
+    _testPaths:
+      data: {source: testPath}
+      draw:
+        lines:
+          color: '#FF8127'
+          width: 3px
+          order: 500
+    _testPaths2:
+      data: {source: testPath2}
+      draw:
+        lines:
+          color: '#FF8127'
+          width: 3px
+          order: 500
+    _overlandRoute:
+      data: {source: overlandRoute}
+      draw:
+        lines:
+          color: '#FF8127'
+          width: 3px
+          order: 500
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
     mz_route_line:
         data: { source: mz_route_line }
