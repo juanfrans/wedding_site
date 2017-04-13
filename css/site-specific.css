@@ -130,3 +130,17 @@ img.details-image{
 .leaflet-container a{
   color: #595959;
 }
+
+/******** Form styling ***********/
+.form-responsive {
+  overflow: hidden;
+  position: relative;
+  height: 1550px;
+}
+.form-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /*position: absolute;*/
+}
