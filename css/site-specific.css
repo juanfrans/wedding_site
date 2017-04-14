@@ -130,6 +130,9 @@ img.details-image{
 .leaflet-container a{
   color: #595959;
 }
+.leaflet-container {
+  font-family: 'Roboto Mono', monospace;
+}
 
 /******** Form styling ***********/
 .form-responsive {

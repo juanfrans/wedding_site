@@ -1429,7 +1429,8 @@ layers:
                 polygons:
                     # color: [0.608,0.925,0.965] ## original color
                     # color: [0.528,0.902,0.960] ## more saturated
-                    color: [0.432,0.890,0.960] ## even more saturated
+                    # color: [0.432,0.890,0.960] ## even more saturated
+                    color: '#8EBCD1'
         playas:
             filter: { kind: playa, $zoom: {min: 6} }
             draw:

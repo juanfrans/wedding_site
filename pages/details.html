@@ -117,15 +117,11 @@
       });
       layer.addTo(map);
       map.setView([38.85, 21.9], 8);
-      var airLinesStyle = {
-        "weight": 2.5,
-        "color": "#FF8127",
-        "dashArray": "4, 6"
-      };
-      // L.geoJSON(airLines, {
-      //   style: airLinesStyle,
-      //   onEachFeature: onEachFeature
-      // }).addTo(map);
+      var coupleIcon = L.icon({
+        iconUrl: '../img/map/couple.svg',
+        iconSize: [60, 60]
+      })
+      L.marker([39.283964, 20.388225], {icon: coupleIcon}).addTo(map).bindPopup("Wedding!");
   </script>
 </body>
 </html>
