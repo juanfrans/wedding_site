@@ -93,6 +93,10 @@ p.details {
   font-family: 'Roboto Mono', monospace;
   /*font-family: 'Josefin Sans', sans-serif;*/
 }
+p.details a {
+  text-decoration: underline;
+  color: #000000;
+}
 img.details-image{
   margin-top: 20px;
   margin-bottom: 20px;
