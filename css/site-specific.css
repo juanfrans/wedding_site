@@ -55,7 +55,9 @@
   color: #000000;
   background-color: #FFFF00;
 }
-
+.navbar-toggle{
+  border: 0px;
+}
 /********* Jumbotron stuff *********/
 .jumbotron h1 {
   text-align: center;
