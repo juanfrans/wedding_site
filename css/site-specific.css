@@ -114,6 +114,11 @@ img.details-image{
 .routesList li {
   margin-bottom: 30px;
 }
+p.details a:hover {
+  color: #000000;
+  background-color: #FFFF00;
+  /*text-decoration: underline;*/
+}
 
 /********* Map styling ***********/
 #map {
