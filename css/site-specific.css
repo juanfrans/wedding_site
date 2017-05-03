@@ -3,6 +3,9 @@
   .container {
     max-width: 1024px;
   }
+  img.registry-image {
+    max-width: 300px;
+  }
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -78,9 +81,9 @@
 /*font-family: 'Architects Daughter', cursive;*/
 }
 .col-md-4 {
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 20px;
 }
 .details-content {
   margin-bottom: 40px;
@@ -102,6 +105,9 @@ p.details a {
 img.details-image{
   margin-top: 20px;
   margin-bottom: 20px;
+}
+img.registry-image{
+  margin: auto;
 }
 .routesList {
   /*font-family: 'Reenie Beanie', cursive;*/
