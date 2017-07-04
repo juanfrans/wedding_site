@@ -162,3 +162,8 @@ p.details a:hover {
   width: 100%;
   /*position: absolute;*/
 }
+
+/********* Apple Music ********/
+.appleMusic {
+  padding-bottom: 25px;
+}
